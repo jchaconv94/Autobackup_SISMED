@@ -1,0 +1,5 @@
+client_config_file: client_secrets.json
+auth_local_webserver: False
+save_credentials: True
+save_credentials_backend: file
+save_credentials_file: credentials.json

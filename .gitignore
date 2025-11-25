@@ -1,0 +1,42 @@
+# Credenciales y secretos
+client_secrets.json
+credentials.json
+autobackup_config.json
+
+# Archivos de log
+*.log
+autobackup_service.log
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# Instalador
+installer_output/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Temporal
+*.tmp
+*.bak
