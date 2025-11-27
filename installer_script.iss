@@ -21,12 +21,10 @@ Source: "client_secrets.json"; DestDir: "{app}"; Flags: ignoreversion skipifsour
 Name: "{group}\AutoBackup SISMED"; Filename: "{app}\AutoBackup SISMED.exe"; Comment: "Servicio de respaldo automatico"
 Name: "{group}\Configurar AutoBackup"; Filename: "{app}\AutoBackup Config.exe"; Comment: "Configurar carpetas y conexion"
 Name: "{group}\Desinstalar AutoBackup SISMED"; Filename: "{uninstallexe}"
+Name: "{commonstartup}\AutoBackup SISMED"; Filename: "{app}\AutoBackup SISMED.exe"; Comment: "Inicia automaticamente el servicio"; WorkingDir: "{app}"
 
 [Run]
 Filename: "{app}\AutoBackup Config.exe"; Description: "Configurar AutoBackup (primera vez)"; Flags: postinstall nowait skipifsilent
-
-[Registry]
-Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Run"; ValueType: string; ValueName: "AutoBackup SISMED"; ValueData: """{app}\AutoBackup SISMED.exe"""; Flags: uninsdeletevalue
 
 [UninstallDelete]
 Type: filesandordirs; Name: "{app}"

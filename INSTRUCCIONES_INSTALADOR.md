@@ -34,7 +34,7 @@ Esto creará ambos archivos .exe en la carpeta `dist\`
 5. Usuario cierra la ventana
 
 ### Desde ese momento:
-- **AutoBackup SISMED** se ejecuta automáticamente al iniciar Windows
+- El instalador crea un acceso directo en la carpeta **Inicio** de Windows, así que **AutoBackup SISMED** se ejecuta automáticamente cada vez que el usuario inicia sesión (sin volver a pedir acceso a Drive)
 - Aparece icono en bandeja del sistema (cerca del reloj)
 - Clic derecho en icono:
   - "Abrir interfaz" → Para cambiar configuración
@@ -46,6 +46,9 @@ Esto creará ambos archivos .exe en la carpeta `dist\`
 En el menú inicio:
 - **AutoBackup SISMED** → Inicia el servicio manualmente
 - **Configurar AutoBackup** → Abre la interfaz de configuración
+
+En la carpeta de inicio común (se ejecuta al prender la PC):
+- **AutoBackup SISMED** → Servicio en segundo plano que arranca solo
 
 ## Para distribuir:
 
@@ -64,6 +67,7 @@ Solo necesita:
 ## Notas importantes:
 
 - Primera ejecución requiere configuración manual (2 minutos)
-- Después funciona 100% automático
+- Después funciona 100% automático gracias al acceso directo en Inicio
 - El servicio inicia con Windows sin mostrar ventanas
 - Icono en bandeja siempre visible para acceso rápido
+- Si vienes de una versión antigua que usaba tarea programada, puedes ejecutar `eliminar_tarea_windows.ps1` antes de instalar para limpiar esa tarea.

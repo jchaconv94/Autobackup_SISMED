@@ -34,17 +34,12 @@
 - Configura nombre de carpeta en Drive
 - Cierra la aplicación
 
-### Paso 2: Configurar inicio automático OCULTO
-```powershell
-# Elimina tarea anterior si existe
-.\eliminar_tarea_windows.ps1
-
-# Crea nueva tarea con versión OCULTA
-.\crear_tarea_windows.ps1
-```
+### Paso 2: Inicio automático del servicio
+- **Si instalaste con `AutoBackup_SISMED_Setup.exe`:** el instalador coloca un acceso directo en la carpeta de Inicio de Windows, por lo que `AutoBackup SISMED.exe` se ejecutará solo al prender la PC. No necesitas programar tareas.
+- **Si estás ejecutando directamente desde el repositorio (sin instalador):** puedes seguir usando los scripts `eliminar_tarea_windows.ps1` y `crear_tarea_windows.ps1` para registrar una tarea programada manualmente.
 
 ### Paso 3: Reinicia tu PC
-- El servicio iniciará automáticamente
+- El servicio iniciará automáticamente (por el acceso directo en Inicio o la tarea manual, según tu caso)
 - NO verás ninguna ventana
 - Funcionará en segundo plano
 
